@@ -2,9 +2,6 @@ title: Landing
 pages: false
 files:
   fields:
-    mainColor:
-      label: Color
-      type: color
     caption:
       label: Caption
       type: textarea
