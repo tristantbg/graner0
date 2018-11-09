@@ -1,0 +1,94 @@
+.flickity-enabled.is-draggable .flickity-viewport
+	cursor pointer !important
+
+.slider
+	hideselect()
+	width 100%
+	.flickity-viewport
+		// transition height 200ms ease
+		height 100%
+	.flickity-slider
+		position relative
+		height 100%
+	.slide
+		width 100%
+		height 100%
+		text-align center
+		.content
+			position relative
+			width 100%
+			height 100%
+			img
+				display block
+				width 100%
+				height auto
+		.content.contain
+			img, video
+				height 100%
+				object-fit contain
+		.content.video
+			width 100%
+			.plyr--ready
+				width 100%
+				height 100%
+			video
+				width 100%
+				height 100%
+				object-fit contain
+	.flickity-prev-next-button
+		top 0
+		height 100%
+		width 50%
+		margin-top 0
+		background transparent
+		padding 0
+		transform none
+		border none
+		border-radius 0
+		z-index 10
+		+below($md)
+			display none
+		svg
+			display none
+		&.previous
+			left 0
+		&.next
+			right 0
+		&[disabled]
+			display none
+		&:focus
+			outline none
+			box-shadow none
+
+.slider:not(.sliding)
+	.flickity-slider
+		position relative
+		transform none !important
+	.slide
+		width 100%
+		top 0 !important
+		left 0 !important
+		visibility hidden
+	.slide.is-selected
+		visibility visible
+		z-index 1
+
+.player-container
+	height 100%
+	padding $padding ($padding*3)
+	+below($md)
+		padding ($padding/2)
+
+.plyr__video-embed
+	padding 0 !important
+	& > div
+		transform none !important
+
+.slider-footer
+	display flex
+	justify-content space-between
+
+body.lightbox-on
+	overflow hidden
+	#lightbox
+		display block

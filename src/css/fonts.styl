@@ -1,0 +1,60 @@
+webfont('GlossyDisplayLight', 'GlossyDisplayLight')
+webfont('UniversLTStdLight', 'UniversLTStdLight')
+
+text()
+	font-family Helvetica Neue, Arial, sans-serif
+
+title()
+	serif()
+	font-size 5.5rem
+	letter-spacing -0.05em
+	+below($sm)
+		font-size 4rem
+
+small()
+	line-height 1.2
+	+above($md + 1)
+		font-size 0.7rem
+
+// Main font styles
+
+::selection
+	background alpha($secondary, 0.5)
+
+::-moz-selection
+	background alpha($secondary, 0.5)
+
+body,html
+	-webkit-text-size-adjust 100%
+
+html
+	+above($sm + 1)
+		font-size 1.3vw
+	+above($xl + 1)
+		font-size 1vw
+	+below($sm)
+		font-size 3vmin
+
+body
+	text()
+	font-size 0.8rem
+	line-height 1
+	letter-spacing -0.02em
+	color $secondary
+	text-rendering optimizeLegibility
+	font-smoothing()
+	+below($xl)
+		font-size 18px
+	+below($sm)
+		font-size 0.9rem
+
+p
+	line-height inherit
+	&:not(:last-child)
+		margin-bottom 1em
+
+.uppercase
+	text-transform uppercase
+
+.text-center
+	text-align center

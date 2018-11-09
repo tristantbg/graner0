@@ -1,0 +1,38 @@
+title: Landing
+pages: false
+files:
+  fields:
+    mainColor:
+      label: Color
+      type: color
+    caption:
+      label: Caption
+      type: textarea
+      buttons:
+        - link
+        - email
+    vimeoID:
+      label: Vimeo ID
+      type: text
+      icon: code
+    videostream:
+      label: Video external stream link (.M3U8)
+      type: url
+    videoexternal:
+      label: Video external file link (.MP4)
+      type: url
+    videofile:
+      label: Video File (.MP4)
+      type: select
+      options: videos
+    videofilewebm:
+      label: Video File (.WEBM)
+      type: select
+      options: videos
+fields:
+  title:
+    label: Title
+    type:  text
+  medias:
+    label: Medias
+    type: images

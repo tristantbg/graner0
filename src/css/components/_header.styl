@@ -1,0 +1,20 @@
+$titleTransition = 0.7s
+
+header
+	hideselect()
+	align(vertical)
+	position fixed
+	width 20%
+	min-width 20rem
+	left 0
+	padding $padding ($padding/2)
+	z-index 10
+	+below($md)
+		align()
+		top $padding
+	h1
+		display none
+	#logo
+		svg
+			path
+				fill $secondary

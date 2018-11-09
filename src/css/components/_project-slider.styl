@@ -1,0 +1,89 @@
+[page-type=project]
+	.slider
+		width 100%
+		height 100%
+		hideselect()
+		.slider-footer
+			position absolute
+			bottom 0
+			width 100%
+			display flex
+			// justify-content space-between
+			z-index 2
+			background $primary
+			padding-top 0.4rem
+			small()
+			.caption
+				margin-left 1em
+		.flickity-viewport
+			width 100%
+		.flickity-slider
+			transform none !important
+		.slide
+			width 100%
+			left 0 !important
+			visibility hidden
+			+above($sm + 1)
+				height 100%
+			.content
+				width 100%
+				padding-bottom 1.2rem
+				+above($sm + 1)
+					height 100%
+			img
+				width 100%
+				+above($sm + 1)
+					height 100%
+					object-fit contain
+					object-position top left
+			.content.video
+				width 100%
+				.plyr--ready
+					width 100%
+					height 100%
+				video
+					width 100%
+					height 100%
+					object-fit contain
+			&.format-png, &.format-gif
+				background alpha($secondary, 0.05)
+				img
+					mix-blend-mode darken
+					object-position center
+			&.is-selected
+				visibility visible
+				z-index 1
+		.flickity-prev-next-button
+			// cursor none !important
+			top 0
+			height 100%
+			width 50%
+			margin-top 0
+			background transparent
+			padding 0
+			transform none
+			border none
+			border-radius 0
+			z-index 1
+			overflow hidden
+			+below($md)
+				display none
+			svg
+				// display none
+				align()
+				width 2rem
+				height 1.4rem
+			&.previous
+				left 0
+			&.next
+				right 0
+			&[disabled]
+				display none
+			&:active
+				opacity 1
+			&:focus
+				box-shadow none
+				outline none
+			&:not(:hover)
+				svg
+					display none
